@@ -1,13 +1,105 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather Sans", sans-serif;
+}
+body {
+  background-color: #47597e;
+  color: #dddddd;
+}
+.container {
+  /* background-color: red; */
+  padding: 25px 50px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.category {
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+.category + hr {
+  width: 100px;
+  margin: auto;
+  border: 5px solid #293b5f;
+  background-color: #293b5f;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 10px;
+  background-color: #dbe6fd;
+  margin: 10px 15px 10px 0px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.movie-card > img {
+  width: 280px;
+  height: 420px;
+  border-radius: 12px;
+  transition: all 500ms;
+}
+.movie-card > img:hover {
+  transform: scale(0.9);
+}
+
+.movie-card > button {
+  background: #293b5f;
+  margin-top: 7px;
+  color: red;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  transition: all 500ms;
+}
+.movie-card > button:hover {
+  background: #47597e;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+.movie-card > p {
+  /* font-size: 4rem; */
+  color: red;
+  position: absolute;
+  top: 43%;
+  left: 43%;
+  transition: all 1s;
+}
+.navbar {
+  background-color: #293b5f;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position: fixed;
+  width: 100%; */
+}
+.navbar > h1 {
+  letter-spacing: 4px;
+}
+.navbar > h1 > img {
+  height: 31px;
+  margin-right: 8px;
+}
+.navbar input {
+  padding: 5px;
+  border: none;
+  border-radius: 12px;
+  width: 200px;
+}
+.navbar input:focus {
+  border: 2px solid #dbe6fd;
+  outline: none;
 }
