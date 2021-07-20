@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import planet from "./planets.png";
+import planet from "../planets.png";
 
 const Navbar = ({ getMovie }) => {
   const [search, setSearch] = useState("");
