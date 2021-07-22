@@ -3,7 +3,10 @@ import MovieList from "./components/MovieList";
 import Navbar from "./components/Navbar";
 
 function App() {
-  const tmdbAPI = "3cf311f3657f655a386cc6563171a1e2";
+  const tmdbAPI =
+    process.env.NODE_ENV === "development"
+      ? process.env.REACT_APP_TMDB_API
+      : process.env.TMDB_API;
   const [movies, setMovies] = useState([]);
   const [favMovies, setFavMovies] = useState([]);
 
